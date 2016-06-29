@@ -1,82 +1,54 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfChess.WpfPresentation", "WpfChess.WpfPresentation\WpfChess.WpfPresentation.csproj", "{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfChess.ChessModel", "WpfChess.ChessModel\WpfChess.ChessModel.csproj", "{02446A1A-305E-4D57-9A2E-AC86F73E7F19}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfLab.Controls", "WpfLab.Controls\WpfLab.Controls.csproj", "{54E36425-EB49-4F20-B1F5-FBE7412D6727}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfChess.InputLib", "WpfChess.InputLib\WpfChess.InputLib.csproj", "{85BD4CD4-8A4C-44B3-A8D6-31EB8A724B21}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfChess.WpfPresentation", "WpfChess.WpfPresentation\WpfChess.WpfPresentation.csproj", "{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfLab.Controls", "WpfLab.Controls\WpfLab.Controls.csproj", "{54E36425-EB49-4F20-B1F5-FBE7412D6727}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs34
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = WpfLab.Controls\\WpfLab.Controls.csproj
-		SccProjectName1 = WpfLab.Controls
-		SccLocalPath1 = WpfLab.Controls
-		SccProjectUniqueName2 = WpfChess.InputLib\\WpfChess.InputLib.csproj
-		SccProjectName2 = WpfChess.InputLib
-		SccLocalPath2 = WpfChess.InputLib
-		SccProjectUniqueName3 = WpfChess.WpfPresentation\\WpfChess.WpfPresentation.csproj
-		SccProjectName3 = WpfChess.WpfPresentation
-		SccLocalPath3 = WpfChess.WpfPresentation
-		SccProjectUniqueName4 = WpfChess.ChessModel\\WpfChess.ChessModel.csproj
-		SccProjectName4 = WpfChess.ChessModel
-		SccLocalPath4 = WpfChess.ChessModel
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
-		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}.Debug|x86.ActiveCfg = Debug|x86
-		{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}.Release|Any CPU.ActiveCfg = Release|x86
-		{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}.Release|Mixed Platforms.Build.0 = Release|x86
-		{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}.Release|x86.ActiveCfg = Release|x86
-		{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}.Release|x86.Build.0 = Release|x86
 		{02446A1A-305E-4D57-9A2E-AC86F73E7F19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{02446A1A-305E-4D57-9A2E-AC86F73E7F19}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02446A1A-305E-4D57-9A2E-AC86F73E7F19}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{02446A1A-305E-4D57-9A2E-AC86F73E7F19}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{02446A1A-305E-4D57-9A2E-AC86F73E7F19}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{02446A1A-305E-4D57-9A2E-AC86F73E7F19}.Debug|x86.Build.0 = Debug|Any CPU
 		{02446A1A-305E-4D57-9A2E-AC86F73E7F19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02446A1A-305E-4D57-9A2E-AC86F73E7F19}.Release|Any CPU.Build.0 = Release|Any CPU
-		{02446A1A-305E-4D57-9A2E-AC86F73E7F19}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{02446A1A-305E-4D57-9A2E-AC86F73E7F19}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{02446A1A-305E-4D57-9A2E-AC86F73E7F19}.Release|x86.ActiveCfg = Release|Any CPU
-		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Release|Any CPU.Build.0 = Release|Any CPU
-		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Release|x86.ActiveCfg = Release|Any CPU
+		{02446A1A-305E-4D57-9A2E-AC86F73E7F19}.Release|x86.Build.0 = Release|Any CPU
 		{85BD4CD4-8A4C-44B3-A8D6-31EB8A724B21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{85BD4CD4-8A4C-44B3-A8D6-31EB8A724B21}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{85BD4CD4-8A4C-44B3-A8D6-31EB8A724B21}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{85BD4CD4-8A4C-44B3-A8D6-31EB8A724B21}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{85BD4CD4-8A4C-44B3-A8D6-31EB8A724B21}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{85BD4CD4-8A4C-44B3-A8D6-31EB8A724B21}.Debug|x86.Build.0 = Debug|Any CPU
 		{85BD4CD4-8A4C-44B3-A8D6-31EB8A724B21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85BD4CD4-8A4C-44B3-A8D6-31EB8A724B21}.Release|Any CPU.Build.0 = Release|Any CPU
-		{85BD4CD4-8A4C-44B3-A8D6-31EB8A724B21}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{85BD4CD4-8A4C-44B3-A8D6-31EB8A724B21}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{85BD4CD4-8A4C-44B3-A8D6-31EB8A724B21}.Release|x86.ActiveCfg = Release|Any CPU
+		{85BD4CD4-8A4C-44B3-A8D6-31EB8A724B21}.Release|x86.Build.0 = Release|Any CPU
+		{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}.Debug|x86.ActiveCfg = Debug|x86
+		{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}.Debug|x86.Build.0 = Debug|x86
+		{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}.Release|Any CPU.ActiveCfg = Release|x86
+		{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}.Release|x86.ActiveCfg = Release|x86
+		{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}.Release|x86.Build.0 = Release|x86
+		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Debug|x86.Build.0 = Debug|Any CPU
+		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Release|x86.ActiveCfg = Release|Any CPU
+		{54E36425-EB49-4F20-B1F5-FBE7412D6727}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
