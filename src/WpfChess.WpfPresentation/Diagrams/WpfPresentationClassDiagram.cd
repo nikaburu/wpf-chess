@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WpfChess.WpfPresentation.MainWindow" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.Converters.IsUnderCheckConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converters\IsUnderCheckConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.Converters.IsWhiteConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converters\IsWhiteConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.Converters.IsWhiteToFillColorConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converters\IsWhiteToFillColorConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.Converters.IsWhiteToStrokeColorConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converters\IsWhiteToStrokeColorConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.Exceptions.ChessGameException" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\ChessGameException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.Helpers.GameSettingHelper">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAIEAgAAAAAAAIBAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\GameSettingHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.Model.GamePreloader">
+    <Position X="4.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAACAAgAAAAgAAAAIAAAAAACAAAAA=</HashCode>
+      <FileName>Model\GamePreloader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.View.AlertView" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\AlertView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.View.CellView" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\CellView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.View.FieldView" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>View\FieldView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.View.FigureView" Collapsed="true">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\FigureView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.View.GamePreloaderView" Collapsed="true">
+    <Position X="4.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\GamePreloaderView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.View.PawnTransformationView" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\PawnTransformationView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.ViewModel.AlertViewModel" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAIAAAAAAAAAECAAAAAAAAAAAIAAAAgBIgAAAAE=</HashCode>
+      <FileName>ViewModel\AlertViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.ViewModel.CellViewModel">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAgAAEAEAEAEQABEABAEBCAAAAAEAAAAAAggAAAAAE=</HashCode>
+      <FileName>ViewModel\CellViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.ViewModel.FieldViewModel">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAhgAZAQAgAAAIAAQCMAAAAEUAIgAAAEAAAAAgAAAAA=</HashCode>
+      <FileName>ViewModel\FieldViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.ViewModel.GamePreloaderViewModel">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQAQACgCAEAAAAAAAAAAAAAAAICAEAAQAAAA=</HashCode>
+      <FileName>ViewModel\GamePreloaderViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.ViewModel.MainWindowViewModel" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAgAAABAAABAAAAAEAAAAAgAAAAAAAgAAEAA=</HashCode>
+      <FileName>ViewModel\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfChess.WpfPresentation.ViewModel.PawnTransformationViewModel" Collapsed="true">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABAAABEAAAkAAAAAQAABAAAgABIBEAAAA=</HashCode>
+      <FileName>ViewModel\PawnTransformationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="WpfChess.WpfPresentation.Model.GameConfigData">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAACgAAAAAAAAAAAAABAAAEAgAAAAQAAAA=</HashCode>
+      <FileName>Model\GameConfigData.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

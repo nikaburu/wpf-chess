@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="WpfChess.WpfPresentation.View.FieldView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controls="clr-namespace:WpfLab.Controls;assembly=WpfLab.Controls"
+             xmlns:View="clr-namespace:WpfChess.WpfPresentation.View" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+    <Viewbox DockPanel.Dock="Left">
+            <UniformGrid DataContext="{Binding Path=Cells}" Name="chessBoard" Columns="8" Rows="8" Height="300" Width="300" />        
+    </Viewbox>
+        <!--Mate popup-->
+        <Controls:ModalDialogPopup IsOpen="{Binding Path=IsMatePopup, Mode=TwoWay}">
+            <Controls:ModalDialogPopup.HostedContent>
+                <ContentControl>
+                    <Grid Height="200" Width="300">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">
+                            Mate is on field!
+                        </TextBlock>
+                        <Button Style="{DynamicResource SimpleButton}" Command="{Binding Path=HideMatePopupCommand}" Grid.Row="1" Width="80" Content="Hide" />
+                    </Grid>
+                </ContentControl>
+            </Controls:ModalDialogPopup.HostedContent>
+        </Controls:ModalDialogPopup>
+        
+        <!--Pawn transformation popup-->
+        <View:PawnTransformationView DataContext="{Binding Path=PawnTransformationViewModel}"></View:PawnTransformationView>
+    </Grid>
+</UserControl>

@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="WpfChess.WpfPresentation.View.CellView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:View="clr-namespace:WpfChess.WpfPresentation.View" mc:Ignorable="d" 
+             d:DesignHeight="83" d:DesignWidth="87">
+    <Grid Background="{Binding Path=Background}">
+        <Grid.InputBindings>
+            <MouseBinding Command="{Binding Path=MakeSelected}" Gesture="LeftClick"></MouseBinding>
+            <MouseBinding Command="{Binding Path=MakeTurn}" Gesture="RightClick "></MouseBinding>
+        </Grid.InputBindings>
+        <Border BorderThickness="2" BorderBrush="Brown" CornerRadius="0" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualWidth}"
+                Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualHeight}">
+            <View:FigureView DataContext="{Binding Path=Figure}"></View:FigureView>
+        </Border>
+    </Grid>
+</UserControl>

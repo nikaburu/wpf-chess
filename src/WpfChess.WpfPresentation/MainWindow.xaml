@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfChess.WpfPresentation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Chess"
+        mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Converters="clr-namespace:WpfChess.WpfPresentation.Converters"
+        xmlns:View="clr-namespace:WpfChess.WpfPresentation.View" xmlns:Controls="clr-namespace:WpfLab.Controls;assembly=WpfLab.Controls" Height="600" Width="528" MinWidth="150" MinHeight="220" Background="#FFB49C5B">
+    <Window.Resources>        
+        <Converters:IsWhiteConverter x:Key="isWhiteConverter" />
+        <BooleanToVisibilityConverter x:Key="isUnderCheckConverter" />
+    </Window.Resources>
+
+    <DockPanel>
+        <Border DockPanel.Dock="Top" BorderBrush="Brown" BorderThickness="2">
+            <Grid Height="30" Margin="10,10,10,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*" />
+                    <ColumnDefinition Width="150*" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+
+                <Border BorderBrush="Brown" BorderThickness="2">
+                    <TextBlock Background="{Binding Path=FieldViewModel.IsWhiteGo, 
+                    Converter={StaticResource ResourceKey=isWhiteConverter}}" Width="Auto" Height="Auto" />
+                </Border>
+
+                <TextBlock Grid.Column="1" Visibility="{Binding Path=FieldViewModel.IsUnderCheck, 
+                    Converter={StaticResource ResourceKey=isUnderCheckConverter}}" TextAlignment="Center" 
+                           Text="Check!" Foreground="{Binding Path=FieldViewModel.IsWhiteGo, Converter={StaticResource ResourceKey=isWhiteConverter}}" Width="Auto" Height="Auto" />
+
+                <Controls:GifImageControl Visibility="{Binding Path=FieldViewModel.IsWaiting, 
+                    Converter={StaticResource ResourceKey=isUnderCheckConverter}}" 
+                                          Grid.Column="2" GifSource="ClockAnimation.gif" AllowClickToPause="False"/>
+
+                    <!--<Button Style="{DynamicResource ButtonStyle}" Content="" Grid.Column="2" Width="Auto" Height="Auto">
+                    <Button.InputBindings>
+                        <MouseBinding Command="{Binding Path=RestartGameCommand}" Gesture="LeftClick"></MouseBinding>
+                    </Button.InputBindings>
+                </Button>-->
+            </Grid>
+        </Border>
+
+        <!--Field-->
+        <View:FieldView DataContext="{Binding Path=FieldViewModel}" />
+        
+        <!--Alert-->
+        <View:AlertView DataContext="{Binding Path=AlertViewModel}"/>
+    </DockPanel>
+</Window>
