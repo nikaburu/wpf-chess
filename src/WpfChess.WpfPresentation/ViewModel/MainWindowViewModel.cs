@@ -7,10 +7,6 @@ namespace WpfChess.WpfPresentation.ViewModel
 {
     public sealed class MainWindowViewModel : ViewModelBase
     {
-        #region Fields
-        private string _errorMessage;
-        #endregion
-
         #region Delegates
         public delegate void ShowErrorMessageDelegate(string errorText);
         #endregion

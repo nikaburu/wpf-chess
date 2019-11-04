@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfChess.ChessModel", "WpfChess.ChessModel\WpfChess.ChessModel.csproj", "{02446A1A-305E-4D57-9A2E-AC86F73E7F19}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfChess.ChessModel", "src\WpfChess.ChessModel\WpfChess.ChessModel.csproj", "{02446A1A-305E-4D57-9A2E-AC86F73E7F19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfChess.InputLib", "WpfChess.InputLib\WpfChess.InputLib.csproj", "{85BD4CD4-8A4C-44B3-A8D6-31EB8A724B21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfChess.InputLib", "src\WpfChess.InputLib\WpfChess.InputLib.csproj", "{85BD4CD4-8A4C-44B3-A8D6-31EB8A724B21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfChess.WpfPresentation", "WpfChess.WpfPresentation\WpfChess.WpfPresentation.csproj", "{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfChess.WpfPresentation", "src\WpfChess.WpfPresentation\WpfChess.WpfPresentation.csproj", "{FA0F18C8-FC4E-4227-A36D-5C8ACCDC88A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfLab.Controls", "WpfLab.Controls\WpfLab.Controls.csproj", "{54E36425-EB49-4F20-B1F5-FBE7412D6727}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfLab.Controls", "src\WpfLab.Controls\WpfLab.Controls.csproj", "{54E36425-EB49-4F20-B1F5-FBE7412D6727}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

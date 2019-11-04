@@ -1,5 +1,4 @@
-﻿using System.Deployment.Application;
-using System.IO;
+﻿using System.IO;
 using System.Reflection;
 using WpfChess.ChessModel;
 using WpfChess.InputLib.Input;
@@ -59,10 +58,10 @@ namespace WpfChess.WpfPresentation.Model
                     inputController = new AiInputController(field);
                     break;
                 case GameMode.NetworkMode:
-                    inputController = new NetworkInputController(gameConfigData.ServiceUrl,
-                                                                 gameConfigData.EndpointAddress, gameConfigData.AdUrl,
-                                                                 !gameConfigData.IsFirstGo);
-                    break;
+                    // inputController = new NetworkInputController(gameConfigData.ServiceUrl,
+                    //                                              gameConfigData.EndpointAddress, gameConfigData.AdUrl,
+                    //                                              !gameConfigData.IsFirstGo);
+                    // break;
                 default:
                     inputController = new OnePcInputController();
                     break;
@@ -81,15 +80,15 @@ namespace WpfChess.WpfPresentation.Model
 
         private string ConfigFilePath()
         {
-            if (ApplicationDeployment.IsNetworkDeployed)
-            {
-                string path = ApplicationDeployment.CurrentDeployment.DataDirectory + @"\" + ConfigFileName;
-                if (File.Exists(path))
-                {
-                    return path;
-                }
-            }
-            else
+            // if (ApplicationDeployment.IsNetworkDeployed)
+            // {
+            //     string path = ApplicationDeployment.CurrentDeployment.DataDirectory + @"\" + ConfigFileName;
+            //     if (File.Exists(path))
+            //     {
+            //         return path;
+            //     }
+            // }
+            // else
             {
                 string pathToExe = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Data\" + ConfigFileName;
                 if (File.Exists(pathToExe))
