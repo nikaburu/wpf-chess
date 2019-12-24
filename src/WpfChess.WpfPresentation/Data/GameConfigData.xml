@@ -1,9 +1,0 @@
-﻿<?xml version="1.0"?>
-<GameConfigData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ServiceUrl>net.tcp://localhost:6733</ServiceUrl>
-  <AdUrl>ChessService</AdUrl>
-  <EndpointAddress>net.tcp://localhost:6736/ChessService</EndpointAddress>
-  <IsFirstGo>true</IsFirstGo>
-  <!--OnePcMode or AiMode or NetworkMode-->
-  <GameMode>OnePcMode</GameMode>
-</GameConfigData>

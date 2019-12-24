@@ -27,7 +27,7 @@ namespace WpfChess.WpfPresentation
                 new DispatcherUnhandledExceptionEventHandler(DispatcherUnhandledExceptionExecute);
 
             GamePreloaderView view = new GamePreloaderView();
-            GamePreloaderViewModel viewModel = new GamePreloaderViewModel(view, new GamePreloader());
+            GamePreloaderViewModel viewModel = new GamePreloaderViewModel(view);
 
             //TryResource();
 

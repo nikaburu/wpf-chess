@@ -134,6 +134,9 @@ namespace WpfChess.WpfPresentation.ViewModel
 
         public bool MakeTurnExecute(CellViewModel fromCell, CellViewModel toCell)
         {
+            if (toCell == null)
+                throw new ArgumentNullException(nameof(toCell));
+            
             if (fromCell != null && fromCell.Figure.IsWhite == IsWhiteGo && _field.MakeTurn(fromCell.Cell, toCell.Cell))
             {
                 fromCell.CallFigurePropertyChanged();

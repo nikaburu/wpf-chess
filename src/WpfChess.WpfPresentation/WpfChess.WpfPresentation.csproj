@@ -25,8 +25,4 @@
     <None Include="Diagrams\InputLibClassDiagram.cd" />
     <None Include="Diagrams\WpfPresentationClassDiagram.cd" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Data\GameConfigData.xml" CopyToOutputDirectory="Always" />
-    <Content Include="GameConfigData.xml" CopyToOutputDirectory="Always" />
-  </ItemGroup>
 </Project>

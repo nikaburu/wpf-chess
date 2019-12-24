@@ -1,6 +1,8 @@
 ﻿using System;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using WpfChess.ChessModel;
+using WpfChess.InputLib.Input;
 using WpfChess.WpfPresentation.Model;
 using WpfChess.WpfPresentation.View;
 
@@ -10,48 +12,17 @@ namespace WpfChess.WpfPresentation.ViewModel
     {
         #region Fields
         private readonly GamePreloaderView _view;
-        private readonly GamePreloader _gamePreloader;
-        private string _serviceUrl;
-        private string _endpointAddress;
         #endregion
 
         #region Properties
-        public string ServiceUrl
-        {
-            get
-            {
-                return _serviceUrl.Substring(_serviceUrl.IndexOf("//") +2);
-            }
-            set
-            {
-                _serviceUrl = "net.tcp://" + value;
-            }
-        }
-        public string EndpointAddress
-        {
-            get { return _endpointAddress.Substring(_endpointAddress.IndexOf("//") + 2); }
-            set
-            {
-                _endpointAddress = "net.tcp://" + value;
-            }
-        }
-
-        public string AdUrl { get; set; }
-        public bool IsFirst { get; set; }
+        public bool IsFirst { get; set; } = true;
 
         #endregion
 
         #region Constructors
-        public GamePreloaderViewModel(GamePreloaderView view, GamePreloader gamePreloader)
+        public GamePreloaderViewModel(GamePreloaderView view)
         {
-            _view = view ?? throw new ArgumentNullException(nameof(view));;
-            _gamePreloader = gamePreloader ?? throw new ArgumentNullException(nameof(gamePreloader));
-
-            GameConfigData configData = _gamePreloader.ConfigData;
-            _serviceUrl = configData.ServiceUrl;
-            _endpointAddress = configData.EndpointAddress;
-            AdUrl = configData.AdUrl;
-            IsFirst = configData.IsFirstGo;
+            _view = view ?? throw new ArgumentNullException(nameof(view));
         }
         #endregion Constructors
 
@@ -71,10 +42,44 @@ namespace WpfChess.WpfPresentation.ViewModel
                 gameMode = GameMode.OnePcMode;
             }
             
-            _gamePreloader.StartNewGame(new GameConfigData(_serviceUrl, AdUrl, _endpointAddress, IsFirst, gameMode));
+            StartNewGame(new GameConfig(IsFirst, gameMode));
             _view.Close();
         }
 
+        #endregion
+
+        #region Private members
+        
+        private static void StartNewGame(GameConfig config)
+        {
+            Field field = new Field();
+            FieldViewModel fieldViewModel = new FieldViewModel(field, GetInputController(config, field));
+
+            MainWindow window = new MainWindow();
+
+            MainWindowViewModel viewModel = new MainWindowViewModel(fieldViewModel);
+            window.DataContext = viewModel;
+            window.Show();
+        }
+
+        private static InputController GetInputController(GameConfig config, Field field)
+        {
+            InputController inputController;
+            switch (config.GameMode)
+            {
+                case GameMode.OnePcMode:
+                    inputController = new OnePcInputController();
+                    break;
+                case GameMode.AiMode:
+                    inputController = new AiInputController(field, !config.IsFirstGo);
+                    break;
+                default:
+                    inputController = new OnePcInputController();
+                    break;
+            }
+
+            return inputController;
+        }
         #endregion
     }
 }

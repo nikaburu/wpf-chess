@@ -20,10 +20,10 @@ namespace WpfChess.InputLib.Input
         private bool _pawnNearBoardAfterTurn;
         #endregion
 
-        public AiInputController(Field field): base(false)
+        public AiInputController(Field field, bool isWhile): base(false)
         {
             _field = field;
-            _isWhite = false;
+            _isWhite = isWhile;
             _random = new Random((int)DateTime.Now.Ticks);
         }
 
