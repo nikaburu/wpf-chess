@@ -18,7 +18,7 @@ namespace WpfLab.Controls
     {
         #region Fields
 
-        public static readonly DependencyProperty IsOpenProperty = 
+        public static readonly DependencyProperty IsOpenProperty =
            DependencyProperty.Register("IsOpen", typeof(bool), typeof(ModalDialogPopup),
            new PropertyMetadata(false, new PropertyChangedCallback(OnOpenChanged)));
 
@@ -271,13 +271,13 @@ namespace WpfLab.Controls
         void Close()
         {
             dialog.IsOpen = false;
-			if (!IsDesignMode)
-			{
-				myAdorner.Visibility = Visibility.Hidden;
-			}
+            if (!IsDesignMode)
+            {
+                myAdorner.Visibility = Visibility.Hidden;
+            }
         }
 
-    	static Visibility ConvertBoolToVisibility(bool value)
+        static Visibility ConvertBoolToVisibility(bool value)
         {
             return value ? Visibility.Visible : Visibility.Collapsed;
         }
@@ -520,6 +520,9 @@ namespace WpfLab.Controls
 
         protected override void OnRender(DrawingContext drawingContext)
         {
+            if (drawingContext == null)
+                throw new ArgumentNullException(nameof(drawingContext));
+
             FrameworkElement elem = (FrameworkElement)this.AdornedElement;
             Rect adornedElementRect = new Rect(0, 0, elem.ActualWidth, elem.ActualHeight);
             drawingContext.DrawRectangle(Background, StrokeBorder, adornedElementRect);

@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace WpfChess.ChessModel.Figures
 {
     public abstract class Figure
     {
         #region Fields
-        protected Cell Cell;
+        protected Cell Cell { get; set; }
         #endregion
 
         #region Constructors
@@ -30,6 +31,9 @@ namespace WpfChess.ChessModel.Figures
         public abstract List<List<Cell>> GetPossibleTurns();
         public void MakeTurn(Cell toCell)
         {
+            if (toCell == null)
+                throw new ArgumentNullException(nameof(toCell));
+                
             toCell.Figure = this;
             this.Cell.Figure = null;
             this.Cell = toCell;

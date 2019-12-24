@@ -21,7 +21,7 @@ namespace WpfChess.WpfPresentation.ViewModel
                 if (!_isClosed)
                 {
                     _isOpen = value;
-                    RaisePropertyChanged("IsOpen");
+                    RaisePropertyChanged(nameof(IsOpen));
                 }
             }
         }
@@ -31,7 +31,7 @@ namespace WpfChess.WpfPresentation.ViewModel
             private set
             {
                 _messageText = value;
-                RaisePropertyChanged("MessageText");
+                RaisePropertyChanged(nameof(MessageText));
             }
         }
 

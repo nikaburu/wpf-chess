@@ -67,11 +67,11 @@ namespace WpfChess.InputLib.Input
             {
                 if (_random.Next(100) < 10)
                 {
-                    figureName = _possiblePawnTransformations[_random.Next(_possiblePawnTransformations.Count() - 1)];
+                    figureName = _possiblePawnTransformations[_random.Next(_possiblePawnTransformations.Length - 1)];
                 }
                 else
                 {
-                    figureName = _possiblePawnTransformations[_possiblePawnTransformations.Count() - 1];
+                    figureName = _possiblePawnTransformations[_possiblePawnTransformations.Length - 1];
                 }
                 
 

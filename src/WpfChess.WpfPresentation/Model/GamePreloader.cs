@@ -78,7 +78,7 @@ namespace WpfChess.WpfPresentation.Model
             }
         }
 
-        private string ConfigFilePath()
+        private static string ConfigFilePath()
         {
             // if (ApplicationDeployment.IsNetworkDeployed)
             // {

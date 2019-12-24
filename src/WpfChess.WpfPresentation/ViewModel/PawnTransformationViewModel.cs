@@ -77,7 +77,7 @@ namespace WpfChess.WpfPresentation.ViewModel
             _cell.TransformFigureOnCel(figureType, _cell.Figure.IsWhite);
 
             IsPawnTransformationPopup = false;
-            RaisePropertyChanged("IsPawnTransformationPopup");
+            RaisePropertyChanged(nameof(IsPawnTransformationPopup));
             InvokePawnTransformationDoneEvent();
         }
 

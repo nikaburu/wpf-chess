@@ -4,7 +4,7 @@ using System.Windows.Media;
 
 namespace WpfChess.WpfPresentation.Converters
 {
-    class IsWhiteToFillColorConverter : IValueConverter
+    public class IsWhiteToFillColorConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {

@@ -44,8 +44,8 @@ namespace WpfChess.WpfPresentation.ViewModel
         #region Constructors
         public GamePreloaderViewModel(GamePreloaderView view, GamePreloader gamePreloader)
         {
-            _view = view;
-            _gamePreloader = gamePreloader;
+            _view = view ?? throw new ArgumentNullException(nameof(view));;
+            _gamePreloader = gamePreloader ?? throw new ArgumentNullException(nameof(gamePreloader));
 
             GameConfigData configData = _gamePreloader.ConfigData;
             _serviceUrl = configData.ServiceUrl;

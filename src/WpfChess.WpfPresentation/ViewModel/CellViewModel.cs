@@ -50,7 +50,7 @@ namespace WpfChess.WpfPresentation.ViewModel
                 {
                     _isMarked = value;
 
-                    RaisePropertyChanged("Background");
+                    RaisePropertyChanged(nameof(Background));
                 }
             }
         }
@@ -63,7 +63,7 @@ namespace WpfChess.WpfPresentation.ViewModel
                 {
                     _isSelected = value;
 
-                    RaisePropertyChanged("Background");
+                    RaisePropertyChanged(nameof(Background));
                 }
             }
         }
@@ -88,7 +88,7 @@ namespace WpfChess.WpfPresentation.ViewModel
         #region Publlic members
         public void CallFigurePropertyChanged()
         {
-            RaisePropertyChanged("Figure");
+            RaisePropertyChanged(nameof(Figure));
         }
 
         public void TransformFigureOnCel(string typeName, bool isWhiteFigure)

@@ -4,7 +4,7 @@ using System.Windows.Data;
 
 namespace WpfChess.WpfPresentation.Converters
 {
-    class IsUnderCheckConverter : IValueConverter
+    public class IsUnderCheckConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {

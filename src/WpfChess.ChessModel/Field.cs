@@ -97,6 +97,12 @@ namespace WpfChess.ChessModel
         /// <returns></returns>
         public bool MakeTurn(Cell fromCell, Cell toCell)
         {
+            if (fromCell == null)
+                throw new ArgumentNullException(nameof(toCell));
+
+            if (toCell == null)
+                throw new ArgumentNullException(nameof(toCell));
+
             if (fromCell.Figure == null || (toCell.Figure != null && toCell.Figure is KingFigure))
             {
                 return false;
@@ -122,6 +128,9 @@ namespace WpfChess.ChessModel
         /// <returns></returns>
         public List<Cell> PossibleTurns(Cell fromCell)
         {
+            if (fromCell == null)
+                throw new ArgumentNullException(nameof(fromCell));
+
             if (fromCell.Figure != null)
             {
                 List<Cell> cells = FilterAccordingFigureComposition(fromCell);

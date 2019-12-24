@@ -37,7 +37,7 @@ namespace WpfChess.WpfPresentation.ViewModel
                 if (isCheck && _field.IsMateOnField)
                 {
                     IsMatePopup = true;
-                    RaisePropertyChanged("IsMatePopup");
+                    RaisePropertyChanged(nameof(IsMatePopup));
                 }
                 return isCheck;
             }
@@ -63,7 +63,7 @@ namespace WpfChess.WpfPresentation.ViewModel
         private void HideMatePopupCommandExecute()
         {
             IsMatePopup = false;
-            RaisePropertyChanged("IsMatePopup");
+            RaisePropertyChanged(nameof(IsMatePopup));
         }
 
         #endregion
@@ -71,6 +71,11 @@ namespace WpfChess.WpfPresentation.ViewModel
         #region Constructors
         public FieldViewModel(Field field, InputController inputController)
         {
+            if (field == null)
+                throw new ArgumentNullException(nameof(field));
+            if (inputController == null)
+                throw new ArgumentNullException(nameof(inputController));
+
             _field = field;
             _field.PawnFigureTransformationEvent += this.PawnFigureNearBoard;
 
@@ -86,6 +91,9 @@ namespace WpfChess.WpfPresentation.ViewModel
         #region Public members
         public void MarkCellsForTurn(CellViewModel fromCell)
         {
+            if (fromCell == null)
+                throw new ArgumentNullException(nameof(fromCell));
+
             bool isWasSelected = fromCell.IsSelected;
             ClearAllCellsFromSelection();
 
@@ -103,6 +111,9 @@ namespace WpfChess.WpfPresentation.ViewModel
 
         public bool MakeTurn(CellViewModel toCell)
         {
+            if (toCell == null)
+                throw new ArgumentNullException(nameof(toCell));
+
             if (_inputController.IsWaiting) return false;
 
             _makeTurnFromInputController = false;
@@ -112,7 +123,7 @@ namespace WpfChess.WpfPresentation.ViewModel
                 {
                     SendTurnToInputController(toCell);
 
-                    RaisePropertyChanged("IsWaiting");
+                    RaisePropertyChanged(nameof(IsWaiting));
                 }
 
                 return true;
@@ -128,8 +139,8 @@ namespace WpfChess.WpfPresentation.ViewModel
                 fromCell.CallFigurePropertyChanged();
                 toCell.CallFigurePropertyChanged();
 
-                RaisePropertyChanged("IsWhiteGo");
-                RaisePropertyChanged("IsUnderCheck");
+                RaisePropertyChanged(nameof(IsWhiteGo));
+                RaisePropertyChanged(nameof(IsUnderCheck));
 
                 ClearAllCellsFromSelection();
                 return true;
@@ -158,7 +169,7 @@ namespace WpfChess.WpfPresentation.ViewModel
                 toCell.TransformFigureOnCel(args.FigureName, toCell.Figure.IsWhite);
             }
 
-            RaisePropertyChanged("IsWaiting");
+            RaisePropertyChanged(nameof(IsWaiting));
         }
 
         private void ClearAllCellsFromSelection()
@@ -190,7 +201,7 @@ namespace WpfChess.WpfPresentation.ViewModel
                 PawnTransformationViewModel = new PawnTransformationViewModel(IsWhiteGo, this.Cells.First(rec => rec.Cell == args.Cell));
                 PawnTransformationViewModel.PawnTransformationDoneEvent += SendTurnToInputController;
                 _isPawnTransformation = true;
-                RaisePropertyChanged("PawnTransformationViewModel");
+                RaisePropertyChanged(nameof(PawnTransformationViewModel));
             }
         }
 
@@ -235,7 +246,7 @@ namespace WpfChess.WpfPresentation.ViewModel
             //Action act = () => RaisePropertyChanged("IsWaiting");
             //uiDispatcher.Invoke(DispatcherPriority.Normal, act);
 
-            RaisePropertyChanged("IsWaiting");
+            RaisePropertyChanged(nameof(IsWaiting));
         }
         #endregion
     }

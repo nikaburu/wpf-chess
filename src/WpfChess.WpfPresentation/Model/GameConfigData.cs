@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace WpfChess.WpfPresentation.Model
@@ -33,9 +34,9 @@ namespace WpfChess.WpfPresentation.Model
         {
             GameConfigData data;
             XmlSerializer serializer = new XmlSerializer(typeof(GameConfigData));
-            using (StreamReader file = new StreamReader(fileStream))
+            using (XmlReader reader = XmlReader.Create(fileStream))
             {
-                data = (GameConfigData)serializer.Deserialize(file);
+                data = (GameConfigData)serializer.Deserialize(reader);
             }
 
             return data;

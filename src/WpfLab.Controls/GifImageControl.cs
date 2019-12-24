@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows;
@@ -143,10 +145,10 @@ namespace WpfLab.Controls
 
         private Bitmap GetBitmapResourceFromAssembly(Assembly assemblyToSearch)
         {
-            string[] resourselist = assemblyToSearch.GetManifestResourceNames();
+            List<string> resourselist = assemblyToSearch.GetManifestResourceNames().ToList();
             if (null != assemblyToSearch.FullName)
             {
-                string searchName = String.Format("{0}.{1}", assemblyToSearch.FullName.Split(',')[0], GifSource);
+                string searchName = $"{assemblyToSearch.FullName.Split(',')[0]}.{GifSource}";
                 if (resourselist.Contains(searchName))
                 {
                     Stream bitmapStream = assemblyToSearch.GetManifestResourceStream(searchName);
@@ -181,7 +183,7 @@ namespace WpfLab.Controls
 
 
         [DllImport("gdi32.dll", EntryPoint = "DeleteObject")]
-        public static extern IntPtr DeleteObject(IntPtr hDc);
+        private static extern IntPtr DeleteObject(IntPtr hDc);
 
         private static BitmapSource GetBitmapSource(Bitmap gdiBitmap)
         {
