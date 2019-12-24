@@ -10,6 +10,7 @@ namespace WpfLab.Controls
     using System.Windows.Controls.Primitives;
     using System.Windows.Documents;
     using System.Windows.Media;
+    using WpfLab.Controls.Localization;
 
     [TemplatePart(Name = "content", Type = typeof(Grid))]
     [TemplatePart(Name = "contentHost", Type = typeof(ContentPresenter))]
@@ -382,7 +383,7 @@ namespace WpfLab.Controls
             EnsureRootElement();
             if (rootElement == null)
             {
-                throw new Exception("ModalDialogPopup was unable to locate the root element.");
+                throw new Exception(Messages.ModlaDialogUnableToLocateRootElement);
             }
             FrameworkElement elem = (FrameworkElement)dialog.Child;
             double actualX = (rootElement.ActualWidth / 2) - (elem.ActualWidth / 2);

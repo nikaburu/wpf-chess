@@ -10,6 +10,7 @@ using WpfChess.ChessModel.Events;
 using WpfChess.InputLib.Events;
 using WpfChess.InputLib.Input;
 using WpfChess.WpfPresentation.Exceptions;
+using WpfChess.WpfPresentation.Localization;
 
 namespace WpfChess.WpfPresentation.ViewModel
 {
@@ -164,7 +165,7 @@ namespace WpfChess.WpfPresentation.ViewModel
             _makeTurnFromInputController = true;
             if (!MakeTurnExecute(fromCell, toCell))
             {
-                throw new ChessGameException("Input with synchronisation error.");
+                throw new ChessGameException(Messages.InputWithSyncError);
             }
 
             if (args.FigureName != null)

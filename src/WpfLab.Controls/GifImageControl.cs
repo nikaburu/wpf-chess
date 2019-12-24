@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
+using WpfLab.Controls.Localization;
 using Image = System.Windows.Controls.Image;
 
 namespace WpfLab.Controls
@@ -135,7 +136,7 @@ namespace WpfLab.Controls
                         assemblyToSearch = Assembly.GetEntryAssembly();
                         _Bitmap = GetBitmapResourceFromAssembly(assemblyToSearch);
                         if (null == _Bitmap)
-                            throw new FileNotFoundException("GIF Source was not found.", GifSource);
+                            throw new FileNotFoundException(Messages.GifSourceNotFound, GifSource);
                     }
                 }
             }

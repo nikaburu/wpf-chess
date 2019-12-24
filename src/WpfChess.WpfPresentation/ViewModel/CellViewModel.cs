@@ -5,6 +5,7 @@ using WpfChess.ChessModel;
 using WpfChess.ChessModel.Figures;
 using WpfChess.WpfPresentation.Exceptions;
 using WpfChess.WpfPresentation.Helpers;
+using WpfChess.WpfPresentation.Localization;
 
 namespace WpfChess.WpfPresentation.ViewModel
 {
@@ -112,7 +113,7 @@ namespace WpfChess.WpfPresentation.ViewModel
 
             if (figure == null)
             {
-                throw new ChessGameException("Figure for pawn transformation not selected.");
+                throw new ChessGameException(Messages.PawnTransformationFigureNotSelected);
             }
             _cell.Figure = figure;
             CallFigurePropertyChanged();

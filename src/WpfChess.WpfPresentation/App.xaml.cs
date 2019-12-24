@@ -5,9 +5,9 @@ using System.Windows;
 using System.Windows.Threading;
 using WpfChess.InputLib.Exceptions;
 using WpfChess.WpfPresentation.Exceptions;
-using WpfChess.WpfPresentation.Model;
 using WpfChess.WpfPresentation.View;
 using WpfChess.WpfPresentation.ViewModel;
+using WpfChess.WpfPresentation.Localization;
 
 namespace WpfChess.WpfPresentation
 {
@@ -40,7 +40,7 @@ namespace WpfChess.WpfPresentation
             if (e.Exception is InputException || e.Exception is ChessGameException)
             {
                 string message = e.Exception.Message;
-                MessageBox.Show(message, "Chess game error",
+                MessageBox.Show(message, Messages.ChessGameError,
                                 MessageBoxButton.OK, MessageBoxImage.Error);
 
                 e.Dispatcher.InvokeShutdown();
@@ -64,7 +64,7 @@ namespace WpfChess.WpfPresentation
         {
             Exception ex = e.ExceptionObject as Exception;
 
-            MessageBox.Show(e.ExceptionObject.ToString(), "Chess game unexpected exception!",
+            MessageBox.Show(e.ExceptionObject.ToString(), Messages.UnexpectedException,
                             MessageBoxButton.OK, MessageBoxImage.Error);
 
             foreach (Window window in this.Windows)

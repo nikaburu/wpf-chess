@@ -2,6 +2,7 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using WpfChess.WpfPresentation.Exceptions;
+using WpfChess.WpfPresentation.Localization;
 
 namespace WpfChess.WpfPresentation.ViewModel
 {
@@ -48,7 +49,7 @@ namespace WpfChess.WpfPresentation.ViewModel
             //(new GamePreloader()).StartNewGame();
             //ShowErrorMessage(Guid.NewGuid().ToString());
 
-            throw new ChessGameException("bla");
+            throw new ChessGameException(Messages.ChessGameError);
         }
 
         private void ShowErrorMessageExecute(string errorText)
